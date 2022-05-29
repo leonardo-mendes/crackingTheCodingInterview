@@ -10,7 +10,7 @@ public class ArrayListImpl<T> {
         array = new Object[0];
     }
 
-    public T get(int index){
+    public T get(int index) {
         return (T) this.array[index];
     }
 
@@ -40,9 +40,7 @@ public class ArrayListImpl<T> {
 
     public void add(T value, int index) {
         this.generateNewArray(1);
-        System.arraycopy(this.array, index,
-                this.array, index + 1,
-                (this.array.length - 1) - index);
+        System.arraycopy(this.array, index, this.array, index + 1, (this.array.length - 1) - index);
         this.array[index] = value;
     }
 }
